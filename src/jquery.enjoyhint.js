@@ -541,6 +541,10 @@ CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
                     var y = data.y || 0;
                     var text = data.text || 0;
 
+                    if ($(window).width() < 800) {
+                        x = 10;
+                    }
+
                     var label = that.getLabelElement({
                         x: x,
                         y: y,
