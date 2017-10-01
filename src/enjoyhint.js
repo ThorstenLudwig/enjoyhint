@@ -19,7 +19,10 @@ var EnjoyHint = function (_options) {
 
         onNext: function () {
 
-        }
+        },
+
+        nextText: "Next",
+        skipText: "Skip"
     };
 
     var options = $.extend(defaults, _options);
@@ -75,9 +78,9 @@ var EnjoyHint = function (_options) {
         var $skipBtn = $('.enjoyhint_skip_btn');
 
         $nextBtn.removeClass(that.nextUserClass);
-        $nextBtn.text("Next");
+        $nextBtn.text(options.nextText);
         $skipBtn.removeClass(that.skipUserClass);
-        $skipBtn.text("Skip");
+        $skipBtn.text(options.skipText);
     };
 
     var stepAction = function () {
@@ -183,7 +186,7 @@ var EnjoyHint = function (_options) {
                     var $nextBtn = $('.enjoyhint_next_btn');
 
                     $nextBtn.addClass(step_data.nextButton.className || "");
-                    $nextBtn.text(step_data.nextButton.text || "Next");
+                    $nextBtn.text(step_data.nextButton.text || options.nextText);
                     that.nextUserClass = step_data.nextButton.className;
                 }
 
@@ -192,7 +195,7 @@ var EnjoyHint = function (_options) {
                     var $skipBtn = $('.enjoyhint_skip_btn');
 
                     $skipBtn.addClass(step_data.skipButton.className || "");
-                    $skipBtn.text(step_data.skipButton.text || "Skip");
+                    $skipBtn.text(step_data.skipButton.text || options.skipText);
                     that.skipUserClass = step_data.skipButton.className;
                 }
 
