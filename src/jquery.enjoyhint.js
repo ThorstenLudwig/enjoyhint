@@ -356,7 +356,7 @@ CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
 
                         /* Resizing skip button */
 
-                        var newSkipbuttonLeft = +originalSkipbuttonLeft + (that.shape.attrs.center_x - originalCenterX) / 2;
+                        var newSkipbuttonLeft = +originalSkipbuttonLeft + 60 + (that.shape.attrs.center_x - originalCenterX) / 2;
                         skipButton.css('left', newSkipbuttonLeft < 15 ? 15 : newSkipbuttonLeft);
                         skipButton.css('top', labelRect.top + labelRect.height + 20);
                     }
