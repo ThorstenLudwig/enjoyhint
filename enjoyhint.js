@@ -1285,7 +1285,7 @@ CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
                         top: label_y + label_height + 20
                     });
 
-                    var left_skip = label_x + that.$next_btn.width() + 10;
+                    var left_skip = label_x + that.$next_btn.width() + 70;
 
                     if (that.nextBtn == "hide"){
 
